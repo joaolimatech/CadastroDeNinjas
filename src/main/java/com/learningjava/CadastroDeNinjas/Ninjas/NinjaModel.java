@@ -20,6 +20,8 @@ public class NinjaModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //define que será sequencial, 1,2,3....
     private long id;
     private String nome;
+
+    @Column(unique = true)
     private String email;
     private int idade;
 
