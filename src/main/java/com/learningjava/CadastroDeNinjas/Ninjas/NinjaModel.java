@@ -19,19 +19,21 @@ public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //define que será sequencial, 1,2,3....
     private long id;
+
+    @Column(name = "nome")
     private String nome;
 
-    @Column(unique = true)
+    @Column(unique = true, name = "email")
     private String email;
+
+    @Column(name =  "idade")
     private int idade;
 
     @ManyToOne //Pode ter varios ninjas em 1 missao. 1 ninja tem apenas 1 misao
     @JoinColumn(name="missoes_id") //FK. Como 1 ninja pode estar atrelado a 1 missao, tera somente 1 campo que ira apontar para a 1 missao q ele esta atribuido
     private MissoesModel missoes;
 
-    public NinjaModel(String nome,  String email, int idade) {
-        this.nome = nome;
-        this.email = email;
-        this.idade = idade;
-    }
+    @Column(name="img_url")
+    private String imgUrl;
+
 }
