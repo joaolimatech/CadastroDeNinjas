@@ -36,4 +36,10 @@ public class NinjaModel {
     @Column(name="img_url")
     private String imgUrl;
 
+    /*
+    *
+    INSERT INTO TB_CADASTRO (email, idade, img_url, nome, missoes_id, rank)
+    VALUES ('kakashi@konoha.com', 31, 'https://img.com/kakashi.jpg', 'Kakashi Hatake', 1, 'Jounin');
+    * */
+
 }
